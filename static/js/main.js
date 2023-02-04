@@ -1,5 +1,8 @@
 // Global Variables 
 var meals;
+var t;
+var recipename; 
+
 window.addEventListener('load', setup); 
 
 function setup() {
@@ -16,8 +19,6 @@ function displayRandomMealInfo() {
             document.getElementById("meal-name").innerHTML = data.strMeal
     })
 }
-
-var recipeName; 
 
 function getMeals() {
     let userInput = document.getElementById('usermealinput').value 
@@ -43,16 +44,11 @@ function getMeals() {
     })
 }
 
-var t; 
 function clickfunc(obj) {
     t = $(obj).text();
-    document.getElementById("test").value = t;
+    alert(t);
 }
 
-var recipename = {
-    x: t
-}; 
 
-alert(recipename.x.value)
 
 
