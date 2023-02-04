@@ -6,7 +6,7 @@ function setup() {
     randomMeal = document.getElementById("meal");
     randomMeal.addEventListener("click", displayRandomMealInfo);
     ingMeal = document.getElementById("ingmeal");
-    ingMeal.addEventListener("click", getMeal);
+    ingMeal.addEventListener("click", getMeals);
 }
 
 function displayRandomMealInfo() {
@@ -17,7 +17,9 @@ function displayRandomMealInfo() {
     })
 }
 
-function getMeal() {
+var recipeName; 
+
+function getMeals() {
     let userInput = document.getElementById('usermealinput').value 
     fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${userInput}`).then(res => res.json())
     .then(mealData => {
@@ -26,10 +28,31 @@ function getMeal() {
                 data: mealData.meals,
                 bDestroy: true, 
                 columns: [
-                    { data: 'strMeal' }
+                    { 
+                      data: 'strMeal',
+                      render: function(data, type){
+                        if(type === 'display'){
+                            data = '<a onclick="clickfunc(this)" href="/yuh/">' + data + '</a>'; 
+                        }
+                        return data;
+                      }
+                    }
                 ],
             });
-        });
-        
+        });   
     })
 }
+
+var t; 
+function clickfunc(obj) {
+    t = $(obj).text();
+    document.getElementById("test").value = t;
+}
+
+var recipename = {
+    x: t
+}; 
+
+alert(recipename.x.value)
+
+
