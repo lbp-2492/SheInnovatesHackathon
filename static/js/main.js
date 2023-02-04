@@ -21,17 +21,15 @@ function getMeal() {
     let userInput = document.getElementById('usermealinput').value 
     fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${userInput}`).then(res => res.json())
     .then(mealData => {
-        mealArray = mealData.meals[0]
-        alert(mealArray)
         $(document).ready(function () {
             $('#meals').DataTable({
-                data: mealArray,
+                data: mealData.meals,
+                bDestroy: true, 
                 columns: [
-                    { title: 'strMeal' },
-                    { title: 'strMealThumb' },
-                    { title: 'idMeal' },
+                    { data: 'strMeal' }
                 ],
             });
         });
+        
     })
 }
