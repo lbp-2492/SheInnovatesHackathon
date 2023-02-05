@@ -5,6 +5,7 @@ function setup() {
     ingredientMeal.addEventListener("click", getMeals);
 }
 
+//displays list of ingredients 
 function getMeals() {
     let userInput = document.getElementById('userinput').value 
     
@@ -32,6 +33,7 @@ function getMeals() {
     })
 }
 
+//displays specific recipe 
 function displayRecipe(idMeal){
     fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idMeal}`)
     .then(res => res.json())

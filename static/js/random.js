@@ -1,10 +1,6 @@
-// Global Variables 
-var meals;
-var t;
-var recipename; 
-
 window.addEventListener('load', setup); 
 
+//when you click on the random button, it calls random meal info 
 function setup() {
     randomMeal = document.getElementById("randomMeal");
     randomMeal.addEventListener("click", displayRandomMealInfo);
