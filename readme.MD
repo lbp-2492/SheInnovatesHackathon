@@ -1,10 +1,5 @@
-Hi
-hi leela
-hi Grace
+A website that uses TheMealDB to allow college students to discover new recipes either
+randomly or through ingredient search. 
 
-1. pip install env 
-2. python -m virtualenv env
-3. pip install flask flask-sqlalchemy
-4. python meals.py
+Done using HTML, CSS, Javascript
 
-^ make sure you delete the env folder before you do the steps above

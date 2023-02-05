@@ -19,6 +19,11 @@ img {
     width: 30%;
 }
 
+.recipeimg2{
+    height: 100%;
+    width: 100%;
+}
+
 nav{
     display: flex;
     padding: 2% 6%;
@@ -191,7 +196,7 @@ html {
     top: 500%;
     left: 50%;
     transform: translate(-50%,-50%);
-    padding: 0 30px;
+    padding: 0 10px;
 }
 .square{
     border-radius: 0;

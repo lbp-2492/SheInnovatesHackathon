@@ -26,10 +26,10 @@
     </section>
 
     <section class="recheader">
-        <h2>Recipe Name</h2>
+        <h2 id="meal-name">Recipe Name</h2>
         <div class="picheader">
             <br>
-            <img src="../static/images/filler.jpg" alt="Food" style="width:20%" class="square">
+            <img id="foodpic" src="../static/images/filler.jpg" alt="Food" style="width:20%" class="recipeimg2">
             <br>
             <br>
             <a href="#R" class="recipe-btn" id="randomMeal">Click Here for Recipe!</a>
@@ -37,7 +37,6 @@
     </section>
 
     <div class="about-section">
-        <h1><a name="R" id="meal-name">Recipe</a></h1>
     </div>
 
     <div class="row">
@@ -49,13 +48,7 @@
                 <div class="containerr">
                     <div class=" ing ul">
                         <br>
-                        <ul>
-                            <li> ingredient 1 </li>
-                            <br>
-                            <li> ingredient 2 </li>
-                            <br>
-                            <li> ingredient 3 </li>
-                        </ul>
+                        <p><span id="ingredients"></span></p>
                     </div>
                     </br>
                 </div>
@@ -69,13 +62,7 @@
                 </div>
                 <div class="containerr">
                     <br>
-                    <ol>
-                        <li> step 1 </li>
-                        <br>
-                        <li> step 2 </li>
-                        <br>
-                        <li> step 3 </li>
-                    </ol>
+                    <p id="instructions"></p>
                     </br>
                 </div>
             </div>
