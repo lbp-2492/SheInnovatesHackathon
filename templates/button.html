@@ -6,6 +6,8 @@
     <meta name=”viewport” content=”width=device-width, initial-scale=1.0″>
     <title> The College Cookbook </title>
     <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
+
 </head>
 <body>
     <section class = "mheader">
@@ -33,12 +35,13 @@
                         color: rgb(111, 83, 47);
                     }
                 </style>
-                <input type="text" name="name" size="40" >
+                <input type="text" name="name" size="40" id="userinput" >
                 <br>
                 <br>
-                <a href="#RL" class="mrecipe-btn" onkeypress="if (event.keyCode ==13){event.preventDefault(); this.click();}">
+                <a href="#RL" id="searchmeal" class="mrecipe-btn" onkeypress="if (event.keyCode ==13){event.preventDefault(); this.click();}">
                     Search
                 </a>
+                <table id="meals" class="display" width="100%"></table>        
                 <br>
              </form>
         </div>
@@ -49,7 +52,7 @@
     <section>
 
         <div class="about-section">
-            <h1><a name="RL">Recipes List</a></h1>
+            <h1><a name="RL"><span id="recipe-name"></span></a></h1>
           </div>
     
         <div class="row">
@@ -74,4 +77,9 @@
     </section>
 
 </body>
+
+<script src="/static/js/ingredient.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
+
 </html>
