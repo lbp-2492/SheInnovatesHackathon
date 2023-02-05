@@ -6,7 +6,7 @@ var recipename;
 window.addEventListener('load', setup); 
 
 function setup() {
-    randomMeal = document.getElementById("meal");
+    randomMeal = document.getElementById("randomMeal");
     randomMeal.addEventListener("click", displayRandomMealInfo);
     ingMeal = document.getElementById("ingmeal");
     ingMeal.addEventListener("click", getMeals);

@@ -3,9 +3,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-    <meta name=”viewport” content=”width=device-width, initial-scale=1.0″>
+    <meta name=”viewport” content="width=device-width", initial-scale=1.0>
     <title> The College Cookbook </title>
     <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
+
 </head>
 
 <body>
@@ -29,12 +31,12 @@
             <img src="images/Grace.jpg" alt="Food" style="width:20%" class="square"> 
             <br>
             <br>
-            <a href="#R" class="recipe-btn">Click Here for Recipe!</a>
+            <a href="#R" class="recipe-btn" id="randomMeal">Click Here for Recipe!</a>
         </div>
     </section>
 
     <div class="about-section">
-        <h1><a name="R">Recipe</a></h1>
+        <h1><a name="R" id="meal-name">Recipe</a></h1>
       </div>
 
     <div class="row">
@@ -84,7 +86,7 @@
 
 </body>
 
-<script src="{{url_for('static', filename='js/main.js')}}"></script>
+<script src="/static/js/main.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
 
