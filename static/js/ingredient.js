@@ -37,7 +37,29 @@ function displayRecipe(idMeal){
     .then(res => res.json())
     .then(mealData => {
         data = mealData.meals[0]
+        document.getElementById("foodpic").src = data.strMealThumb
         document.getElementById("recipe-name").innerHTML = data.strMeal
+        document.getElementById("instructions").innerHTML = data.strInstructions
+
+        let ingList = []
+        let i = 1
+        while(i < 20){
+            let ingredient = `strIngredient${i}`
+            ingList.push(data[ingredient])
+            i += 1
+        }
+
+        let list = document.getElementById("ingredients")
+
+        list.innerHTML = '';
+
+        ingList.forEach((item) => {
+            if(!(item === "")){
+                let li = document.createElement("li");
+                li.innerText = item;
+                list.appendChild(li); 
+            }
+        })
     })
     return false;
 }

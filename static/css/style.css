@@ -12,7 +12,13 @@
 }
 img {
     border-radius: 50%;
-  }
+}
+
+.recipeimg {
+    height: 30%;
+    width: 30%;
+}
+
 nav{
     display: flex;
     padding: 2% 6%;

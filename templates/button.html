@@ -1,79 +1,97 @@
 <?xml version="1.0"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www/w3/org/TR/xhtml/11/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www/w3/org/TR/xhtml/11/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-    <meta name=”viewport” content=”width=device-width, initial-scale=1.0″>
+    <meta name="viewport" content="width=device-width", initial-scale=1.0″>
     <title> The College Cookbook </title>
     <link rel="stylesheet" href="../static/css/style.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
 
 </head>
+
 <body>
-    <section class = "mheader">
+    <section class="mheader">
         <nav>
-            <a href="index.html"> <img src="../static/images/logo.png" ></a>
+            <a href="index.html"> <img src="../static/images/logo.png"></a>
             <div class="nav-links">
                 <ul>
-                    <li><a href = "index.html">HOME</a> </li>
-                    <li><a href = "meals.html">MEALS</a> </li>
-                    <li><a href = "ab.html">ABOUT US</a> </li>
+                    <li><a href="index.html">HOME</a> </li>
+                    <li><a href="meals.html">MEALS</a> </li>
+                    <li><a href="ab.html">ABOUT US</a> </li>
                 </ul>
             </div>
         </nav>
 
-        <div class = "text-box">
+        <div class="text-box">
+
             <head>
                 <title>HTML Forms</title>
-             </head>
-             <p>Enter an Ingredient:</p>
-             <form>
+            </head>
+            <p>Enter an Ingredient:</p>
+            <form>
                 <style>
-                    input[type="text"]{
+                    input[type="text"] {
                         height: 50px;
                         font-size: 30px;
                         color: rgb(111, 83, 47);
                     }
                 </style>
-                <input type="text" name="name" size="40" id="userinput" >
+                <input type="text" name="name" size="40" id="userinput">
                 <br>
                 <br>
-                <a href="#RL" id="searchmeal" class="mrecipe-btn" onkeypress="if (event.keyCode ==13){event.preventDefault(); this.click();}">
+                <a href="#RL" id="searchmeal" class="mrecipe-btn"
+                    onkeypress="if (event.keyCode ==13){event.preventDefault(); this.click();}">
                     Search
                 </a>
-                <table id="meals" class="display" width="100%"></table>        
+                <table id="meals" class="display" width="100%"></table>
                 <br>
-             </form>
+            </form>
         </div>
-    
-        
+
+
     </section>
 
     <section>
 
         <div class="about-section">
             <h1><a name="RL"><span id="recipe-name"></span></a></h1>
-          </div>
-    
-        <div class="row">
-        <div class="columnr">
-            <div class="card">
-            <div class="containerr">
-                <div class=" ing ul">
-                <br>
-                <ul>
-                    <li> ingredient 1 </li>
-                    <br>
-                    <li> ingredient 2 </li>
-                    <br>
-                    <li> ingredient 3 </li>
-                </ul>
-                </div>
-            </br>
-            </div>
-            </div>
+            <img id="foodpic" class="recipeimg" src="" alt="">
         </div>
 
+        <div class="row">
+            <div class="columnr">
+                <div class="card">
+                    <div class=container>
+                        <h2> Ingredients: </h2>
+                    </div>
+                    <div class="containerr">
+                        <div class=" ing ul">
+                            <br>
+                            <p><span id="ingredients"></span></p>
+                        </div>
+                        </br>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="columnr">
+                <div class="card">
+                    <div class=container>
+                        <h2> Instructions: </h2>
+                    </div>
+                    <div class="containerr">
+                        <br>
+                        <p id="instructions"></p>
+                        </br>
+                    </div>
+                </div>
+            </div>
+            </br>
+            </br>
+            </br>
+            </br>
     </section>
 
 </body>
